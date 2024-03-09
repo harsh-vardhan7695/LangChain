@@ -1,0 +1,7 @@
+openai
+langchain
+huggingface_hub
+langchain-openai
+python-dotenv
+streamlit
+langchain-community
