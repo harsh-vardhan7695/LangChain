@@ -1,1 +1,20 @@
-
+Gradient Boosting-based Summarization:
+The code starts by setting up the necessary imports and environment variables, including the OpenAI API key.
+It then defines a speech text and creates a series of chat messages (SystemMessage, HumanMessage) to be used with the ChatOpenAI model for summarization.
+The code calls the get_num_tokens method to count the number of tokens in the speech text and then generates a summary using the ChatOpenAI model.
+Prompt Templates for Text Summarization:
+This section demonstrates the use of a PromptTemplate to create a customizable prompt for text summarization.
+The generic_template variable defines a template that takes the speech text and the desired language as input and generates a summary.
+The LLMChain is then used to apply the prompt and generate a summary in the specified language.
+StuffDocumentChain for Text Summarization:
+This part of the code reads a PDF document using the PyPDF2 library and extracts the text content.
+The text is then wrapped in a Document object and passed to the load_summarize_chain function, which uses the StuffDocumentChain to generate a summary.
+Summarizing Large Documents Using Map Reduce:
+This section demonstrates the use of the map_reduce chain type from LangChain to summarize a large document.
+The code splits the text into smaller chunks using the RecursiveCharacterTextSplitter and then applies the map_reduce chain to generate a summary.
+Map Reduce With Custom Prompts:
+This part of the code showcases the ability to use custom prompts for the map_reduce chain.
+It defines a chunk_prompt and a final_combine_prompt to customize the summarization process.
+The summary_chain is then created using the custom prompts and applied to the text chunks.
+RefineChain for Summarization:
+The final section demonstrates the use of the refine chain type, which iteratively refines the summary of the text.
